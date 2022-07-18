@@ -49,7 +49,7 @@ let click = (color) => {
 
     setTimeout(() => {
         createColorElement(color).classList.remove('selected');
-    })
+    },2500);
 
     checkOrder();
 }
