@@ -66,3 +66,27 @@ let createColorElement = (color) => {
     }
 }
 
+let nextLevel = () => {
+    score++;
+    shuffleOrder();
+}
+
+let gameOver = () => {
+    alert(`Pontuação ${score}\n voce perdeu o jogo\n Clique em ok para iniciar um novo jogo`);
+    order = [];
+    clickedOrder = [];
+
+    playGame();
+}
+
+let playGame = () => {
+    alert('Bem vindo ao Gênesis, Iniciando novo jogo!!');
+    score = 0;
+
+    nextLevel();
+}
+
+green.addEventListener('click', click(0));
+red.addEventListener('click', click(1));
+yellow.addEventListener('click', click(2));
+blue.addEventListener('click', click(3));
